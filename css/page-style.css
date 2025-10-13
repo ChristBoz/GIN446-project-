@@ -161,7 +161,6 @@ footer {
   }
 }
 
-/* === Project Cards === */
 .project-container {
   display: flex;
   flex-direction: column;
@@ -217,3 +216,4 @@ footer {
   margin-top: 1rem;
   align-self: start;
 }
+
