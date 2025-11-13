@@ -37,8 +37,93 @@
    <p>Then came CSS2, which was made available in May 1998 and included support for more sophisticated selectors, media types (screen, print), positioning (absolute, relative), and additional layout control.  Later, CSS2.1 fixed some browser inconsistencies.</p>
    <p>CSS3 was released in the middle of the 2000s; it was divided into modules rather than being a single, comprehensive specification, allowing for the independent development of various features.  Animations, transitions, adaptable layouts, new selectors, and other features were all included in the modules.  It facilitated faster innovation and increased CSS's flexibility.</p>
    <p>More sophisticated CSS features have emerged in recent years, including grid layout, container queries, media queries, flexbox, responsive design, custom properties (variables), etc.  It is constantly changing to assist developers in creating more maintainable and screen-size-adaptable designs.</p>
-
 </details>
+<details>
+        <summary>CSS Rules and How They Work</summary>
+        <p>A CSS rule, also known as a ruleset, is a declaration in CSS that instructs the browser on which HTML element or elements should have a particular appearance.</p>
+        <p>There are two primary components to a rule:</p>
+        <ul>
+          <li>Selector(s)—which HTML element or elements to focus on</li>
+          <li>One or more declarations (property + value) inside { } in a declaration block</li>
+        </ul>
+        <p>A declaration resembles <code>property: value;</code></p>
+        <p>Here's the basic syntax:</p>
+        <pre><code>
+selector {
+  property1: value1;
+  property2: value2;
+  /* …more declarations… */
+}
+        </code></pre>
+        <p>For example:</p>
+        <pre><code>
+p {
+  color: blue;
+  font-size: 16px;
+}
+        </code></pre>
+        <p>Since <code>p</code> is the selector, all paragraphs are targeted. The declarations <code>color: blue;</code> and <code>font-size: 16px;</code> form the full ruleset.</p>
+        <p>Commas can also be used to separate different selectors:</p>
+        <pre><code>
+h1, h2, .special {
+  margin-top: 20px;
+}
+        </code></pre>
+        <p>This applies <code>margin-top: 20px</code> to any element with class <code>special</code>.</p>
+        <h3>The "cascade" and specificity of CSS rule application</h3>
+        <p>There is a reason CSS stands for Cascading Style Sheets: an element may occasionally be subject to more than one rule. CSS uses a system of specificity to determine which rule "wins."</p>
+        <h4>Particulars</h4>
+        <ul>
+          <li>ID selectors (like <code>#myId</code>) are more specific than class selectors (like <code>.myClass</code>).</li>
+          <li>Class selectors are more specific than type selectors (like <code>p</code>, <code>div</code>).</li>
+          <li>Browsers assign weights to selectors to determine which rule applies.</li>
+        </ul>
+        <h4>Cascade and source order</h4>
+        <p>The rule that appears later in the CSS (or "closer" to the element) wins if two rules have the same level of specificity. The "cascading" behavior includes this..</p>
+        <h4>Relevance / !important</h4>
+        <p>By appending <code>!important</code>, you can make a declaration take precedence over others! crucial to it (although this is frequently discouraged as it can make CSS more difficult to maintain).</p>
+        <h4>Inheritance</h4>
+        <p>Child elements inherit certain CSS properties from their parent. If you set <code>color: green;</code> on <code>&lt;body&gt;</code>, for instance, many text elements inside will take on that color unless they are overridden. However, not every property is inherited.</p>
+      </details>
+      
+      <details>
+        <summary>History of JavaScript</summary>
+        <p>In 1995, Brendan Eich developed JavaScript while being at Netscape Communications Corporation. At first it was called Mocha then LiveScript and in December 1995 it became JavaScript. Part of the reason for the name change was to capitalize on the then-current popularity of the Java programming language. JavaScript lets developers carry out tasks like form validation, basic animations and other user interactions right within the browser. It was created to make web pages more interactive.</p>
+        <p>The ECMAScript standard was created in 1996 after JavaScript was submitted to ECMA International for standardization.  The 1997 release of ECMAScript 1 was followed by the 1998 release of ECMAScript 2, which primarily contained minor editorial revisions.  A major turning point was reached in 1999 with the release of ECMAScript 3, which included features like regular expressions, enhanced string handling, and try/catch exception handling.  Dynamic HTML (DHTML), which combined HTML, CSS, and JavaScript to enable more dynamic and animated web pages, appeared around the same time.</p>
+        <p>Modern and responsive web applications were made possible by the 2005 release of AJAX (Asynchronous JavaScript and XML), which enabled web pages to update content dynamically without requiring a complete page reload. The release of ECMAScript 5 (ES5) in 2009 brought getters/setters, JSON support, and strict mode. After ECMAScript 6 (ES6/ES2015) was released in 2015, JavaScript's functionality and readability were significantly increased by adding significant features like arrow functions, template literals, classes, and modules.</p>
+        <p>Every year since 2016, ECMAScript has been updated with new features to improve the language.  JavaScript is now even more flexible for creating web applications, server-side applications, and even mobile apps thanks to innovations like async/await, shared memory, and sophisticated built-in objects.  JavaScript is still one of the most popular programming languages in use today, supporting interactive websites and serving as the foundation for a vast number of contemporary applications.</p>
+      </details>
+
+      <details>
+        <summary>Pre and Post Incrementation in JavaScript</summary>
+        <p>In JavaScript, incrementation is when a value is increased by 1 wether it be Pre incrementation or post incrementation, but there is a difference between them:
+        </p>
+        <p>During pre-incrementation (++x), the variable is incremented before its value is used in the expression.</p>
+        <pre><code>let a = 5;
+let b = ++a; // a becomes 6, then b is assigned the new value of a (6)
+console.log(a); // Output: 6
+console.log(b); // Output: 6</code></pre>
+        <p>During pos-incrementation (x++), the variable's current value is used in the expression before it is incremented and
+          the expression evaluates to the original, un-incremented value of the variable.</p>
+          <pre><code>let x = 5;
+let y = x++; // y is assigned the current value of x (5), then x is incremented to 6
+console.log(x); // Output: 6
+console.log(y); // Output: 5</code></pre>
+          </details>
+
+      <details>
+        <summary>How do websites keep our passwords secure?</summary>
+        <p>Websites ensure password safety by never storing them in plain text format. When a user creates a password, the site generates a unique random "salt" just for that user's account, and combines it with the password. The salted password is then processed using a one-way cryptographic hash function - systems that apply algorithms (that are often slow and contain strong computation power) such as bcrypt, Argon2, or PBKDF2 - that produces a unique string of fixed length. The site only stores the salt and the hash - the actual password is never stored at all. When a user logs into their account, the site takes the password the user provided, uses the same function, and then compares the hash generated by the verification process with the hash stored in the site - if they match, the user is granted access to their account. The protections from this system, lend themselves from the fact that the hash cannot be easily reverted, the unique salted string makes it exceptionally difficult for attackers to use precomputed "rainbow tables", and the slow hashing algorithm helps foil brute-force attacks due to being costly in time. Weak and/or reused passwords are still inherently weak and thus not secure; further, if attackers gain access to a web application/website and have access to the database they still have the ability to guess passwords one at a time, but again it is much more difficult than if the password was simply stored in plain text</p>
+      </details>
+  </main>
+
+  <footer>
+    <p><strong>AI Use Disclosure: </strong>Artificial intelligence was used to improve grammar, structure, organization of the text and designing the website.</p>
+    <p><small>Last updated: October 12, 2025</small></p>
+  </footer>
+</body>
+</html>
+
   </main>
  <footer>
     <p><small>Last updated: September 27, 2025</small></p>
