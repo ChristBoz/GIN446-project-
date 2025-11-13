@@ -4,18 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="ar-style.css" />
-  <title>تاريخ وتطور React</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    main table th, main table td {
-      text-align: right;
-    }
-  </style>
+  <title>تاريخ وتطور React</title>
 </head>
+
 <body>
+  <nav class="top-menu">
+  <div class="menu-label">Menu ▾</div>
+  <div class="menu-options">
+   <a href="index.html" class="top-btn">Home</a>
+    <a href="../css/cv.html" class="top-btn">CV</a>
+    <a href="../css/schedule.html" class="top-btn">Schedule</a>
+    <a href="../css/cv-entry.html" class="top-btn">CV entry</a>
+    <a href="../css/events.html" class="top-btn">Events</a>
+    <a href="../ar/arabic-article.html" class="top-btn">Article in Arabic</a>
+  </div>
+</nav>
+
   <header>
     <h1>تاريخ وتطور React</h1>
-    <nav>
+    <nav class="main-nav">
       <ul>
         <li><a href="#intro">مقدمة</a></li>
         <li><a href="#history">التاريخ</a></li>
@@ -27,7 +35,15 @@
   </header>
 
   <main>
+
     <section id="intro">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" 
+             alt="شعار React" 
+             width="160">
+        <figcaption>شعار مكتبة React</figcaption>
+      </figure>
+
       <h2>ما هو React</h2>
       <p>
         React (أو React.js) هي مكتبة جافا سكربت لبناء الواجهات التفاعلية، وخصوصًا واجهات المستخدم الديناميكية. من أهم مزاياها:
@@ -38,10 +54,27 @@
         <li>الـ Virtual DOM: تحتفظ React بتمثيل خفيف للـ DOM الحقيقي، وتُحدّث فقط ما يحتاج إلى التغيير.</li>
       </ul>
       <p>طُوّرت React بواسطة فيسبوك (الآن Meta).</p>
-    </section>
 
+      <figure>
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/N3AkSS5hXMA"
+          title="مقدمة عن React"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+        <figcaption>🎥 فيديو: مقدمة قصيرة عن React</figcaption>
+      </figure>
+    </section>
     <section id="history">
       <h2>التاريخ والتطوّر: المحطات الرئيسية</h2>
+
+      <figure>
+        <img src="../assets/meta-6871457_1280.webp"
+             alt="شعار شركة Meta (فيسبوك)"
+             width="120">
+        <figcaption>الشركة المطوّرة: Meta (فيسبوك سابقًا)</figcaption>
+      </figure>
+
       <table>
         <thead>
           <tr>
@@ -95,6 +128,7 @@
       </table>
     </section>
 
+
     <section id="features">
       <h2>ما الجديد في الإصدارات الحديثة</h2>
       <ul>
@@ -131,5 +165,9 @@
     </section>
   </main>
 
+  <footer class="site-footer">
+    <p><strong>إفصاح حول استخدام الذكاء الاصطناعي:</strong> تم استخدام الذكاء الاصطناعي لتحسين القواعد اللغوية، وتنظيم النصوص، وتصميم الموقع.</p>
+    <p><small>آخر تحديث: 7 تشرين الثاني 2025</small></p>
+  </footer>
 </body>
 </html>
