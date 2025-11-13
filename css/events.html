@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Browser Events Catalog</title>
+  <link rel="stylesheet" href="events.css">
+</head>
+<body>
+    <nav class="top-menu">
+  <div class="menu-label">Menu ▾</div>
+  <div class="menu-options">
+    <a href="../index.html" class="top-btn">Home</a>
+    <a href="cv.html" class="top-btn">CV</a>
+    <a href="schedule.html" class="top-btn">Schedule</a>
+    <a href="cv-entry.html" class="top-btn">CV entry</a>
+    <a href="events.html" class="top-btn">Events</a>
+    <a href="../ar/arabic-article.html" class="top-btn">Article in Arabic</a>
+  </div>
+</nav>
+
+  <header class="site-header">
+    <h1>Interactive Browser Events Catalog</h1>
+  </header>
+
+  <main class="catalog-wrapper">
+    <section class="search-area">
+      <label for="eventSearch" class="visually-hidden">Search for events</label>
+      <input type="text" id="eventSearch" placeholder="Search by event name or type..." />
+    </section>
+
+    <section id="eventList" class="events-display"></section>
+  </main>
+
+  <footer>
+    <p>Disclaimer: This page is for educational purposes. AI tools were used to assist in formatting and content where noted.</p>
+    <p>Last updated: November 11 2025</p>
+  </footer>
+
+  <script src="../js/events.js"></script>
+</body>
+</html>

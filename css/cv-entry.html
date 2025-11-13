@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Entry | Christ Bozikian</title>
+  <link rel="stylesheet" href="cv.css" />
+</head>
+<body>
+  <nav class="top-menu">
+  <div class="menu-label">Menu ▾</div>
+  <div class="menu-options">
+    <a href="../index.html" class="top-btn">Home</a>
+    <a href="cv.html" class="top-btn">CV</a>
+    <a href="schedule.html" class="top-btn">Schedule</a>
+    <a href="cv-entry.html" class="top-btn">CV entry</a>
+    <a href="events.html" class="top-btn">Events</a>
+    <a href="../ar/arabic-article.html" class="top-btn">Article in Arabic</a>
+  </div>
+</nav>
+  <div class="container">
+    <header>
+      <h1>CV Data Entry</h1>
+      <p class="contact">Fill your information below to generate your CV</p>
+    </header>
+
+    <form id="cvForm">
+      <h2>Personal Information</h2>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required pattern="[A-Za-z\s]+" title="Only letters allowed.">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required placeholder="example@domain.com">
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" required placeholder="+961 70 123 456">
+
+      <label for="github">GitHub Link:</label>
+      <input type="url" id="github" required pattern="https://github\.com/.+" placeholder="https://github.com/username">
+
+      <h2>Education</h2>
+      <div id="educationContainer"></div>
+      <button type="button" id="addEducation">Add Education</button>
+
+      <h2>Experience</h2>
+      <div id="experienceContainer"></div>
+      <button type="button" id="addExperience">Add Experience</button>
+
+      <h2>Skills</h2>
+      <textarea id="skills" rows="3" placeholder="e.g., JavaScript, HTML, CSS, Python"></textarea>
+
+      <h2>Languages</h2>
+      <textarea id="languages" rows="2" placeholder="e.g., English, French, Arabic"></textarea>
+
+      <div class="controls">
+        <button type="submit" class="button">Generate CV</button>
+      </div>
+    </form>
+
+    <section id="cvPreview" hidden>
+      <header>
+        <h1 id="cvName"></h1>
+        <p class="contact" id="cvContact"></p>
+      </header>
+
+      <section>
+        <h2>Education</h2>
+        <div id="cvEducation"></div>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div id="cvExperience"></div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <p id="cvSkills"></p>
+      </section>
+
+      <section>
+        <h2>Languages</h2>
+        <p id="cvLanguages"></p>
+      </section>
+    </section>
+
+    <footer>
+      <p><strong>AI Use Disclosure:</strong> Formatting and layout assisted by AI tools; content written by Christ Bozikian.</p>
+      <p>Disclaimer: This site is a student project for educational purposes.</p>
+      <p>Last updated: November 2025</p>
+    </footer>
+  </div>
+
+  <script src="../js/cv.js"></script>
+</body>
+</html>
